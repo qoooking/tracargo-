@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'items/create'
+
+  get 'items/destroy'
+
   get 'sessions/new'
 
   get 'sessions/create'
@@ -14,4 +18,6 @@ Rails.application.routes.draw do
   
   get 'signup', to: 'users#new'
   resources :users, only: [:index, :show, :new, :create]
+  
+  resources :items, only: [:show, :new, :create, :destroy]
 end

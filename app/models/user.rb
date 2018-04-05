@@ -7,4 +7,6 @@ class User < ApplicationRecord
   validates :tell, length: { maximum: 11 },
                     format: { with: /\d[0-9]\)*\z/ }
   has_secure_password
+  
+  has_many :items
 end
