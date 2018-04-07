@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'contacts/index'
+
+  get 'contacts/create'
+
+  get 'contacts/destroy'
+
   get 'items/create'
 
   get 'items/destroy'
@@ -20,4 +26,6 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show, :new, :create]
   
   resources :items, only: [:show, :new, :create, :destroy]
+  
+  resources :contacts, only: [:index, :create, :destroy]
 end
