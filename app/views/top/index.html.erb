@@ -8,3 +8,8 @@
     </div>
   </div>
 <% end %>
+
+<%= form_tag items_path, method: :get do %>
+  <%= text_field_tag :query %>
+  <%= submit_tag '検索する' %>
+<% end %>
